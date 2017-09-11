@@ -1,4 +1,4 @@
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 import './index.css';
 
 let circle = document.getElementById('circle');
@@ -12,7 +12,7 @@ let source = Observable.fromEvent(document, "mousemove")
   .filter(v => v.x < 1000)
   .delay(300);
 
-function onNext(v) {
+const onNext = (v) => {
   circle.style.left = v.x + "px";
   circle.style.top = v.y + "px";
 }
